@@ -1,0 +1,217 @@
+/* Глобальный сброс и box-sizing (обязательное требование) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    line-height: 1.7;
+    /* Нежно-кремовый фон */
+    background-color: #fffaf5;
+    color: #5a4a4a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Шапка — нежно-розовая */
+.header {
+    background: linear-gradient(135deg, #f8bbd0 0%, #f48fb1 100%);
+    color: #6a1b3d;
+    padding: 50px 20px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.header h1 {
+    font-size: 2.4em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.header .job {
+    font-size: 1.15em;
+    color: #ad1457;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Навигация — пастельно-розовая */
+.nav {
+    background-color: #fce4ec;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    border-bottom: 1px solid #f8bbd0;
+}
+
+.nav a {
+    color: #ad1457;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    letter-spacing: 1px;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.nav a:hover {
+    color: #6a1b3d;
+    border-bottom-color: #f48fb1;
+}
+
+/* Основной контент */
+.main-content {
+    flex: 1;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Секции — белые карточки */
+.section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(244, 143, 177, 0.15);
+    border: 1px solid #fce4ec;
+}
+
+.section h2 {
+    margin-bottom: 18px;
+    color: #ad1457;
+    font-weight: 600;
+    font-size: 1.4em;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #f8bbd0;
+    padding-bottom: 8px;
+}
+
+/* Блок "О себе" */
+.about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.avatar {
+    width: 220px;
+    height: 170px;
+    border-radius: 14px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 4px solid #f8bbd0;
+    box-shadow: 0 4px 15px rgba(244, 143, 177, 0.25);
+}
+
+.bio p {
+    margin-bottom: 12px;
+    color: #5a4a4a;
+}
+
+.bio p:last-child {
+    margin-bottom: 0;
+}
+
+/* Список образования */
+.section ul {
+    padding-left: 22px;
+    list-style: none;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    color: #5a4a4a;
+}
+
+/* Кастомные маркеры списка */
+.section ul li::before {
+    content: "🌸";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.9em;
+}
+
+/* Навыки — нежно-розовые пилюли */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.skill {
+    background-color: #fce4ec;
+    color: #ad1457;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: 600;
+    border: 1px solid #f8bbd0;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.skill:hover {
+    background-color: #f8bbd0;
+    transform: translateY(-2px);
+}
+
+/* Футер — нежно-розовый */
+.footer {
+    background: linear-gradient(135deg, #f8bbd0 0%, #f48fb1 100%);
+    color: #6a1b3d;
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-top: auto;
+}
+
+.footer h2 {
+    color: #6a1b3d;
+    font-weight: 600;
+    font-size: 1.3em;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 6px;
+}
+
+.contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.contacts-list a {
+    color: #6a1b3d;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.contacts-list a:hover {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
