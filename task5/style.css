@@ -11,9 +11,7 @@
     --neon-red: #ff3d7f;
     --neon-yellow: #ffe14d;
     --neon-blue: #22d3ff;
-
     --says-color: #2fb8ff;
-
     --bg-dark: #0a0a12;
     --bg-panel: #12121f;
     --text: #ffffff;
@@ -22,7 +20,7 @@
 
 body {
     font-family: 'Rajdhani', sans-serif;
-    background: var(--bg-dark);
+    background: linear-gradient(180deg, #03133d 0%, #0f1fb6 100%);
     color: var(--text);
     min-height: 100vh;
     display: flex;
@@ -33,20 +31,7 @@ body {
 }
 
 .bg-glow {
-    position: fixed;
-    inset: 0;
-    background:
-        radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.45), transparent 50%),   /* синий */
-        radial-gradient(circle at 85% 25%, rgba(34, 211, 238, 0.40), transparent 50%),   /* голубой */
-        radial-gradient(circle at 50% 85%, rgba(139, 92, 246, 0.45), transparent 55%),   /* фиолетовый */
-        radial-gradient(circle at 80% 70%, rgba(99, 102, 241, 0.35), transparent 50%);   /* индиго */
-    z-index: 0;
-    animation: bgPulse 6s ease-in-out infinite alternate;
-}
-
-@keyframes bgPulse {
-    from { opacity: 0.85; }
-    to   { opacity: 1; }
+    display: none;
 }
 
 .game-container {
@@ -106,11 +91,6 @@ body {
     justify-content: space-between;
     align-items: center;
     transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.stat-card:hover {
-    border-color: rgba(99, 102, 241, 0.7);
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
 }
 
 .stat-label {
@@ -183,18 +163,15 @@ body {
     transition: opacity 0.2s;
 }
 
-
 .sector:nth-child(1) { border-top-left-radius: 100%; }
 .sector:nth-child(2) { border-top-right-radius: 100%; }
 .sector:nth-child(3) { border-bottom-left-radius: 100%; }
 .sector:nth-child(4) { border-bottom-right-radius: 100%; }
 
-
 .green  { background: var(--neon-green);  box-shadow: 0 0 20px rgba(0, 255, 174, 0.5); }
 .red    { background: var(--neon-red);    box-shadow: 0 0 20px rgba(255, 61, 127, 0.5); }
 .yellow { background: var(--neon-yellow); box-shadow: 0 0 20px rgba(255, 225, 77, 0.5); }
 .blue   { background: var(--neon-blue);   box-shadow: 0 0 20px rgba(34, 211, 255, 0.5); }
-
 
 .sector.active {
     filter: brightness(1.8) saturate(1.6);
@@ -209,7 +186,6 @@ body {
 .red.active    { box-shadow: 0 0 60px var(--neon-red),    inset 0 0 40px rgba(255,255,255,0.6); }
 .yellow.active { box-shadow: 0 0 60px var(--neon-yellow), inset 0 0 40px rgba(255,255,255,0.6); }
 .blue.active   { box-shadow: 0 0 60px var(--neon-blue),   inset 0 0 40px rgba(255,255,255,0.6); }
-
 
 .start-btn {
     width: 100%;
@@ -229,27 +205,8 @@ body {
     text-shadow: 0 0 15px rgba(99, 102, 241, 1);
 }
 
-.start-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.5), transparent);
-    transition: left 0.5s ease;
-}
-
 .start-btn:hover {
-    border-color: var(--neon-blue);
-    box-shadow:
-        0 0 40px rgba(34, 211, 238, 0.7),
-        inset 0 0 25px rgba(99, 102, 241, 0.3);
-    text-shadow: 0 0 20px rgba(34, 211, 238, 1);
-}
-
-.start-btn:hover::before {
-    left: 100%;
+    background: linear-gradient(135deg, rgba(79, 150, 246, 0.4), rgba(159, 112, 246, 0.4));
 }
 
 .start-btn:active {
@@ -263,7 +220,6 @@ body {
     text-shadow: none;
 }
 
-/* Адаптив */
 @media (max-width: 480px) {
     .game-container { padding: 24px 20px; border-radius: 22px; }
     .title { font-size: 1.6rem; }

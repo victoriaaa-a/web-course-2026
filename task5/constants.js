@@ -1,0 +1,8 @@
+export const CONFIG = {
+    SHOW_DELAY: 620,
+    ACTIVE_DURATION: 400,
+    START_DELAY: 500,
+    NEXT_ROUND_DELAY: 900,
+    START_GAME_DELAY: 600,
+    STORAGE_KEY: 'simonBest'
+};
