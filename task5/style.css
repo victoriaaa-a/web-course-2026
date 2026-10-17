@@ -30,10 +30,6 @@ body {
     position: relative;
 }
 
-.bg-glow {
-    display: none;
-}
-
 .game-container {
     position: relative;
     z-index: 1;
