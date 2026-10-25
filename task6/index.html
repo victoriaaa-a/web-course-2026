@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Змейка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="title">Змейка</h1>
+
+        <div class="score-panel">
+            <div class="score-item">
+                <span class="score-label">Счёт</span>
+                <strong id="score" class="score-value">0</strong>
+            </div>
+            <div class="score-item">
+                <span class="score-label">Рекорд</span>
+                <strong id="highScore" class="score-value">0</strong>
+            </div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="500" height="500"></canvas>
+
+            <div id="startScreen" class="overlay">
+                <div class="overlay-content">
+                    <h2>Змейка</h2>
+                    <p>Собирай яблоки и не врезайся!</p>
+                    <button id="startBtn" class="btn btn-start">Начать игру</button>
+                </div>
+            </div>
+
+            <div id="gameOverScreen" class="overlay hidden">
+                <div class="overlay-content">
+                    <h2>Игра окончена</h2>
+                    <p>Ваш счёт: <strong id="finalScore">0</strong></p>
+                    <button id="restartBtn" class="btn btn-restart">Играть снова</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls-hint">
+            Управление: <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
