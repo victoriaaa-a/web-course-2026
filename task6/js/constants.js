@@ -13,12 +13,12 @@ export const COLORS = {
     apple:      '#ff6eb6',
 };
 
-export const DIR = Object.freeze({
-    UP:    Object.freeze({ x:  0, y: -1 }),
-    DOWN:  Object.freeze({ x:  0, y:  1 }),
-    LEFT:  Object.freeze({ x: -1, y:  0 }),
-    RIGHT: Object.freeze({ x:  1, y:  0 }),
-});
+export const DIR = {
+    UP:    { x:  0, y: -1 },
+    DOWN:  { x:  0, y:  1 },
+    LEFT:  { x: -1, y:  0 },
+    RIGHT: { x:  1, y:  0 },
+};
 
 export const OPPOSITE_DIR = Object.freeze({
     [DIR.UP.x + ',' + DIR.UP.y]:       DIR.DOWN,
