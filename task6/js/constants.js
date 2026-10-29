@@ -20,9 +20,9 @@ export const DIR = {
     RIGHT: { x:  1, y:  0 },
 };
 
-export const OPPOSITE_DIR = Object.freeze({
+export const OPPOSITE_DIR = {
     [DIR.UP.x + ',' + DIR.UP.y]:       DIR.DOWN,
     [DIR.DOWN.x + ',' + DIR.DOWN.y]:   DIR.UP,
     [DIR.LEFT.x + ',' + DIR.LEFT.y]:   DIR.RIGHT,
     [DIR.RIGHT.x + ',' + DIR.RIGHT.y]: DIR.LEFT,
-});
+};
