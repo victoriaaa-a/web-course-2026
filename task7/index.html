@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №7. Бесконечный скролл</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Лента постов</h1>
+        
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Поиск по заголовку...">
+        </div>
+
+        <div id="errorMessage" class="error-message hidden"></div>
+
+        <div id="postList" class="post-list"></div>
+
+        <div id="loader" class="loader hidden">
+            <div class="spinner"></div>
+            <p>Загрузка...</p>
+        </div>
+
+        <div id="endMessage" class="end-message hidden">
+            Больше постов нет
+        </div>
+
+        <div id="sentinel"></div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
