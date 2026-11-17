@@ -1,0 +1,228 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #ffe4e9; 
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 750px;
+  padding: 50px;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(255, 160, 180, 0.4); 
+  border: 1px solid #ffcce0;
+}
+
+h1 {
+  text-align: center;
+  color: #d14c73; 
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.todo-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 15px 18px;
+  border: 2px solid #ffcce0;
+  border-radius: 14px;
+  outline: none;
+  font-size: 16px;
+  color: #444; 
+  transition: all 0.3s ease;
+}
+
+.todo-form input:focus {
+  border-color: #ff9eb5;
+  box-shadow: 0 0 10px rgba(255, 158, 181, 0.3);
+}
+
+.todo-form select {
+  padding: 15px;
+  border: 2px solid #ffcce0;
+  border-radius: 14px;
+  background: white;
+  outline: none;
+  color: #666;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.todo-form button {
+  background: #ff9eb5; 
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.todo-form button:hover {
+  background: #ff85a1; 
+}
+
+.filters-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  background: #ffe4e9;
+  padding: 8px;
+  border-radius: 14px;
+}
+
+.filters button {
+  padding: 10px 16px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+  color: #995566; 
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filters button:hover {
+  color: #d14c73;
+}
+
+.filters button.active {
+  background: #ff9eb5;
+  color: white;
+  box-shadow: 0 2px 8px rgba(255, 158, 181, 0.4);
+}
+
+.filters-container select {
+  padding: 12px 16px;
+  border: 2px solid #ffcce0;
+  border-radius: 14px;
+  background: white;
+  color: #666;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 20px;
+  background: #fffafb;
+  border: 1px solid #ffcce0;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 158, 181, 0.2);
+}
+
+.todo-item input[type="checkbox"] {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ff9eb5;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.todo-item input[type="checkbox"]:checked {
+  background-color: #ff9eb5;
+  border-color: #ff9eb5;
+}
+
+.todo-item input[type="checkbox"]:checked::after {
+  content: '✔';
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.todo-item span {
+  flex: 1;
+  color: #333;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+
+.todo-item.completed span {
+  text-decoration: line-through;
+  color: #b09fa4;
+}
+
+.todo-item button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #ff9eb5;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.todo-item button:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.stats {
+  margin-bottom: 25px;
+  color: #d14c73;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  background: #ffe4e9;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.empty-message {
+  color: #d14c73;
+  text-align: center;
+  font-style: italic;
+  font-size: 16px;
+  margin-top: 25px;
+}
